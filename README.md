@@ -9,4 +9,10 @@ A simple PLL consists of a Phase and Frequency Detector (PFD), Charge Pump (CP),
 This PLL design multiplies clock frequency by 8 times. 
 
 ## Significance of a PLL 
-<img src =" https://drive.google.com/file/d/1kykjuvL9URsKd5F3G_bPWQOT-zzSnX8C/view?usp=sharing "width="750"/>
+<img width="1137" height="731" alt="src" src="https://github.com/user-attachments/assets/ca4d1e74-db2e-43b9-a10b-9e4990002d36" />
+
+</p>The processors used in our smartphones have various modules inside serving different purposes. These modules may include CPU, GPU, RAM, WiFi module, Audio module, and so on. 
+
+</p> The interesting thing is that each of these modules may not run at a particular clock frequency. For example, the CPU would need a high clock frequency for performing calculations faster, while the Display module may not.
+</p> This is where a Phase-Locked Loop circuit comes into the picture. As shown in Figure above, a PLL is installed at the clock entry point of each above module to produce the desired frequency at which the module would operate.
+</p>
