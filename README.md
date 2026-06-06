@@ -120,5 +120,72 @@ This charge pump current is fed into the low pass filter. The low pass filter is
 
 <img width="1359" height="789" alt="loop_filter_ckt" src="https://github.com/user-attachments/assets/c5cd525f-f617-4bf1-a331-b79ce1285e5a" />
 
+</p>
+This charge on the plates of the capacitor generates a voltage, which is then used as the control signal (Vctrl) to the VCO. </p>
 
-  
+**Design considerations of Loop filter**</p>
+The loop filter consists of a resistor in series with a capacitor. This combination is in parallel with another capacitor as shown in figure above Capacitor C3 adds an integrator path and introduces a pole. The resistor adds a proportional path and introduces a zero. Thus, the system is stable with the addition of these two paths. Capacitor C5 is used to suppress the Vctrl ripple. However, the addition of an additional capacitor comprises on the stability of the PLL. This is because C5 adds another pole. So, to mitigate this issue the value of C5 is chosen to be very small than C3 (~C5 = 0.2*C3) </p>
+
+**Expected output (CP+LF)** </p>
+<img width="582" height="376" alt="(CP+LP)Expected output" src="https://github.com/user-attachments/assets/785037f4-589d-41b9-abd0-40fb5246c4e0" />
+
+**Simulated output (CP + LF)** </p>
+
+**Charge pump output for UP signal** </p>
+<img width="498" height="282" alt="CPO UP signal" src="https://github.com/user-attachments/assets/db3d301e-4803-46ce-b864-6ab94cce7dac" />
+</p>
+
+**Charge pump output for DOWN signal** </p>
+<img width="861" height="616" alt="CPO DOWN signal" src="https://github.com/user-attachments/assets/2aede4c8-1c81-420e-a308-bfd59b503edf" />
+
+### Voltage controlled oscillator  
+</p>
+
+The control voltage is fed to a differential ring oscillator VCO. The VCO produces an output which is oscillating in nature. The frequency of these oscillations is a function of control voltage. </p>
+
+**Schematic of VCO** </p>
+<img width="842" height="628" alt="VCO Schematics" src="https://github.com/user-attachments/assets/2af94cba-2fba-41dc-aa46-969014cee8ba" />
+
+<br>
+
+**Simulated output of VCO** </p>
+<img width="1166" height="564" alt="PLL_13" src="https://github.com/user-attachments/assets/41bd2717-090b-4b1c-8631-ec126d3e8cea" />
+
+</p>
+
+We can see that the frequency of oscillations increases with increase in control voltage input to VCO. </p>
+
+### Frequency Divider 
+</p>
+The frequency divider used in this circuit divides the input frequency by 8 times. </p>
+
+**Simulated output** </p>
+<img width="843" height="622" alt="Simulated output" src="https://github.com/user-attachments/assets/e466984e-e6e6-40c3-a07c-0cb8ae5c06fd" />
+</p>
+
+## Full PLL Simulation  
+</p>
+
+**Integrated schematic** </p>
+<img width="872" height="587" alt="Integrated Schematic" src="https://github.com/user-attachments/assets/7455d32e-7f62-4e0f-86fb-a22d8c5759ac" />
+
+</p>
+
+### Pre layout Simulation results
+</p>
+
+Generates 8x Multiplied Clock
+
+<b> Pre-Layout: </b> <br>
+
+Frequency Obtained for 5Mhz input: &nbsp;&nbsp;&nbsp; 40.98MHz <br>
+Frequency Obtained for 12.5Mhz input: &nbsp;&nbsp;&nbsp; 100MHz
+
+Duty Cycle obtained: &nbsp;&nbsp;&nbsp; 60.24% at 40MHz and 61.38% at 100MHz
+
+Lock-in starts at ~12us for 5MHz input and ~9us for 12.5Mhz input
+
+
+**40Mhz output** 
+</p>
+
