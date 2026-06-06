@@ -1,5 +1,4 @@
 # Design and Implementation of a Clock Multiplier Phase-Locked Loop using Open-Source EDA Tools in 130nm CMOS Technology
-### An on-chip clock mulitplier PLL designed using open source tools and sky130nm pdk
 
 <div align="center">
 
