@@ -92,4 +92,33 @@ There is a 1ns difference between the time period of f_vco and f_clk_in. This is
 <img width="1397" height="292" alt="pfd_sim2" src="https://github.com/user-attachments/assets/f03c554b-d313-43c0-8f8a-8678eac62267" />
 
 
+Fig - Representation as a Phase error detector <br>
 
+   - considering input and reference signal to have different time periods </p>
+
+   <img width="1157" height="553" alt="PFD_ckt" src="https://github.com/user-attachments/assets/4c599643-6e12-4ea6-9eaa-59fdf23957f4" />
+</p>
+   
+In the above simulation result when **f_clk_in** **leads** **f_vco** , **UP** signal is triggered (yellow). While when the **f_clk_in lags f_vco** , **DOWN** signal is triggered. 
+These two (up & down) signals are fed into the charge pump which is the next block of our implemented PLL.</p>
+
+
+### 2. Charge Pump and Loop filter  </p>
+
+### Charge Pump </p>
+ These UP and DOWN pulses are fed into the input of the charge pump. The charge pump is a combination of switches connected to the power supply. This system acts as a current source/sink which injects/draws current into/from the loop filter, based on the duty cycle of UP/DOWN signal. </p>
+
+ **Circuit of Charge Pump used** </p>
+<img width="1702" height="877" alt="charge_pump_ckt" src="https://github.com/user-attachments/assets/2cba1765-941b-41c8-a40b-9b5402c98f8d" />
+</p>
+In the above schematic transistors M4 and M3 act as current sources while transistors M18 and M10 are current mirrors. The schematic shown above contains the loop filter. One can see it at the Vctrl output pin. </p>
+
+### Loop filter </p>
+This charge pump current is fed into the low pass filter. The low pass filter is a capacitor in series with a resistor. The entire system is connected in shunt with the control loop. The duration of pulses from the charge pump decides the amount of charge injected in the capacitor. </p> 
+
+**Circuit of loop filter used** </p>
+
+<img width="1359" height="789" alt="loop_filter_ckt" src="https://github.com/user-attachments/assets/c5cd525f-f617-4bf1-a331-b79ce1285e5a" />
+
+
+  
