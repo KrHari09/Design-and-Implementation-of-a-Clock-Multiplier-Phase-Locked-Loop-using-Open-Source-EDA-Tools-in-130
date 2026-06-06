@@ -1,5 +1,15 @@
-# PLL-Project
-An on-chip clock mulitplier PLL designed using open source tools and sky130nm pdk
+# Design and Implementation of a Clock Multiplier Phase-Locked Loop using Open-Source EDA Tools in 130nm CMOS Technology
+### An on-chip clock mulitplier PLL designed using open source tools and sky130nm pdk
+
+<div align="center">
+
+![PDK](https://img.shields.io/badge/PDK-SkyWater%20130nm-blue?style=for-the-badge)
+![Tools](https://img.shields.io/badge/EDA-xschem%20%7C%20ngspice%20%7C%20magic-orange?style=for-the-badge)
+![Type](https://img.shields.io/badge/Design-Full%20Custom%20Analog-red?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Pre%20%26%20Post%20Layout%20Verified-brightgreen?style=for-the-badge)
+![Multiplier](https://img.shields.io/badge/Clock%20Multiplier-8x-purple?style=for-the-badge)
+
+</div>
 
 ## Introduction
 A clock multiplier Phase-Locked Loop (PLL) is a negative feedback control system that generates a high-frequency output clock whose phase is related to the low frequency input clock. The need for PLLs is widespread as they find application in analog, digital, RF and communication systems. <br>The low-frequency clock can be generated using a crystal with frequencies up to 200 MHz. Generating a high-frequency clock with high spectral purity is not possible with a crystal and this is where PLLs come into play. <br>
