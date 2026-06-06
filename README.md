@@ -55,3 +55,8 @@ This PLL design multiplies clock frequency by 8 times.
 2. ngspice
 3. magic vlsi
 
+## Pre layout simulations
+
+ ### 1. Phase frequency detector (PFD)  </p>
+A phase frequency detector or a phase comparator outputs an UP or a DOWN signal depending upon the timed phase difference between the input signal and reference signal. If the input signal leads the reference signal an UP signal is produced whereas if the input lags the reference signal a down signal is produced. </p>
+ 
