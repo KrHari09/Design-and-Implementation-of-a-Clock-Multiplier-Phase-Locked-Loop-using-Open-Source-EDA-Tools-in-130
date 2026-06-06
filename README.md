@@ -16,3 +16,42 @@ This PLL design multiplies clock frequency by 8 times.
 </p> The interesting thing is that each of these modules may not run at a particular clock frequency. For example, the CPU would need a high clock frequency for performing calculations faster, while the Display module may not.
 </p> This is where a Phase-Locked Loop circuit comes into the picture. As shown in Figure above, a PLL is installed at the clock entry point of each above module to produce the desired frequency at which the module would operate.
 </p>
+
+<br>
+
+## Specifications
+
+### Pre layout simulations
+
+| Parameter | Description | min | val | max | Unit | Conditions |
+| --- | --- | --- | --- | --- | --- | --- |
+| VDD | Digital Supply | - | 1.8 | - | V | T = 27C |
+| F<sub>CLKREF</sub> | Reference | 5 | 9 | 12.5 | MHz | T = 27C |
+| F<sub>CLKOUT</sub> | Output Clock | 40.98 | 71.42 | 100 | MHz | PLL Mode, T = 27C |
+| V<sub>ctrl</sub> | Control Voltage | 0.77 | 0.817 | 0.844 | MHz | PLL Mode, T = 27C |
+| DC | Duty Cycle | 60.24 | 61.26 | 61.38 | % | T = 27C | 
+| T<sub>SET</sub> | Settling Time | ~12 | ~11.5 | ~9 | us | T = 27C |
+
+
+### Post layout simulations
+
+| Parameter | Description | min | val | max | Unit | Conditions |
+| --- | --- | --- | --- | --- | --- | --- |
+| VDD | Digital Supply | - | 1.8 | - | V | T = 27C |
+| F<sub>CLKREF</sub> | Reference | 5 | 9 | 12.5 | MHz | T = 27C |
+| F<sub>CLKOUT</sub> | Output Clock | 40.76 | 73.26 | 100 | MHz | PLL Mode, T = 27C |
+| V<sub>ctrl</sub> | Control Voltage | 0.732 | 0.780 | 0.789 | MHz | PLL Mode, T = 27C |
+| DC | Duty Cycle | 56.82 | 58.82 | 60.27 | % | T = 27C | 
+| T<sub>SET</sub> | Settling Time | ~8.6 | ~5.1 | ~6.4 | us | T = 27C |
+
+## Block Diagram
+
+<img width="1282" height="364" alt="block diagram" src="https://github.com/user-attachments/assets/c13958f7-c131-4f72-8fe8-307d2c41d3c6" />
+<br>
+
+## EDA tools used
+
+1. xschem
+2. ngspice
+3. magic vlsi
+
