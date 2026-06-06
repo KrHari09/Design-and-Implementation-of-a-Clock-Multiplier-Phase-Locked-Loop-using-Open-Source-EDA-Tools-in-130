@@ -7,3 +7,6 @@ A clock multiplier Phase-Locked Loop (PLL) is a negative feedback control system
 A simple PLL consists of a Phase and Frequency Detector (PFD), Charge Pump (CP), Loop Filter (LF), Voltage Controlled Oscillator (VCO) and a frequency divider in the feeback path <br>
 
 This PLL design multiplies clock frequency by 8 times. 
+
+## Significance of a PLL 
+<img src =" https://drive.google.com/file/d/1kykjuvL9URsKd5F3G_bPWQOT-zzSnX8C/view?usp=sharing "width="750"/>
