@@ -226,3 +226,145 @@ Lock-in starts at ~12us for 5MHz input and ~9us for 12.5Mhz input
 **40Mhz output** 
 </p>
 
+<img width="1701" height="872" alt="40MHz output" src="https://github.com/user-attachments/assets/723bf586-9443-4efd-b5f6-ee5e078f8c7b" />
+
+</p>
+
+**100Mhz output**
+</p>
+
+<img width="1695" height="865" alt="100MHz output" src="https://github.com/user-attachments/assets/40bec40c-ef44-4f40-87fc-b2ef853444e9" />
+
+
+</p>
+
+**Close up for 100Mhz** </p>
+<img width="1697" height="871" alt="Close_up_100Mhz Output" src="https://github.com/user-attachments/assets/137c5401-9979-45d8-954d-decc6db1f442" />
+
+**Red signal constantly overlaps blue signal indicating locked state.** </p>
+
+**Pre-layout summary** </p>
+
+| Input Frequency | Output Frequency |
+| :---:  | :-: |
+|5MHz|40.98MHz|
+|9MHz|71.42MHz|
+|10MHz|80.97MHz|
+|12.5MHz|100MHz|
+
+## Post layout circuits
+
+### a. Phase Frequency Detector
+<img width="937" height="735" alt="PFD" src="https://github.com/user-attachments/assets/b331c087-5847-4048-9c6e-065479801a5b" />
+
+</p>
+Fig: Layout of Phase Frequency Detector (PFD)
+</p>
+
+### b. Voltage controlled oscillator
+
+<img width="1383" height="350" alt="VCO" src="https://github.com/user-attachments/assets/fa13f125-511e-401b-b8d2-dbeaeb14d8fd" />
+
+
+</p>
+Fig: Layout of Voltage controlled oscillator (VCO)
+</p>
+
+### c. Charge pump & loop filter
+
+<img width="780" height="596" alt="CPL Filter" src="https://github.com/user-attachments/assets/3b4bd05c-2863-4f84-a314-75a3c8eca4d1" />
+
+</p>
+Fig. - Combined layout of charge pump and loop filter (large boxes are the capacitors of the loop filter)
+</p>
+
+### Charge pump close up
+
+<img width="1078" height="717" alt="CP Close_up" src="https://github.com/user-attachments/assets/125facb7-0820-49b1-b3b1-6ff30e7ec63c" />
+
+### d. Frequency divider 
+
+<img width="1293" height="721" alt="Freq_divider" src="https://github.com/user-attachments/assets/cd80d098-9a88-4a2d-81ef-006eb60a96e5" />
+
+</p>
+Fig: Layout of Frequency divider by 8 circuit
+</p>
+
+The frequency divider by 8 is made from cascading three frequency divider by 2 circuits. The fd/2 ckt layout is shown below <br>
+
+<img width="1386" height="750" alt="fd2 ckt layout" src="https://github.com/user-attachments/assets/f8e65269-aca2-4216-b84d-84dbd5060981" />
+
+### d. Integrated PLL layout  
+
+<img width="923" height="721" alt="integradted pll ayout" src="https://github.com/user-attachments/assets/65213573-eec9-4d5f-b2fa-cb6c8e7a669e" />
+
+<br>
+
+circuit area = 0.2641 mm2
+
+</p> PLL Layout closeup </p>
+
+<img width="1366" height="402" alt="PLL Close_up" src="https://github.com/user-attachments/assets/e61ccfc0-b259-4e26-a305-39e3bbd6824b" />
+
+## Post layout simulations
+
+| Parameter | Description | min | val | max | Unit | Conditions |
+| --- | --- | --- | --- | --- | --- | --- |
+| VDD | Digital Supply | - | 1.8 | - | V | T = 27C |
+| F<sub>CLKREF</sub> | Reference | 5 | 9 | 12.5 | MHz | T = 27C |
+| F<sub>CLKOUT</sub> | Output Clock | 40.76 | 73.26 | 100 | MHz | PLL Mode, T = 27C |
+| V<sub>ctrl</sub> | Control Voltage | 0.732 | 0.780 | 0.789 | MHz | PLL Mode, T = 27C |
+| DC | Duty Cycle | 56.82 | 58.82 | 60.27 | % | T = 27C | 
+| T<sub>SET</sub> | Settling Time | ~8.6 | ~5.1 | ~6.4 | us | T = 27C |
+
+
+### 1. 5 Mhz input 
+
+<img width="1706" height="867" alt="5M Hz" src="https://github.com/user-attachments/assets/83e613f2-f017-4321-946b-034ba03ea0c5" />
+
+
+</p>
+
+**Fig - PLL simulation for 5Mhz input frequency**
+</p>
+
+Red - input signal <br>
+Blue (on red signal) - feedback signal <br>
+Yellow - up signal <br>
+Green - down signal <br>
+Pink - control voltage <br>
+Brown - output signal <br>
+
+ <br>
+
+ <img width="1341" height="430" alt="5MHz io" src="https://github.com/user-attachments/assets/467df42d-37ea-42b9-ac8b-eb816d31b2e3" />
+
+</p>
+
+**Fig - input - output for 5 Mhz operation**
+</p>
+
+ <br>
+
+ <img width="1707" height="872" alt="5MHz close up" src="https://github.com/user-attachments/assets/da4c2225-e5a6-483a-8bf8-494915247462" />
+
+</p>
+
+**Fig - settled output for 5 Mhz operation**
+</p>
+ <br>
+
+ ### 2. 9 Mhz input 
+
+<img width="1692" height="865" alt="9Mhz" src="https://github.com/user-attachments/assets/b3a6caf4-2abe-4fb0-985d-e7a8abef50b0" />
+
+</p>
+
+**Fig - PLL simulation for 9Mhz input frequency**
+</p>
+ <br>
+
+ 
+
+
+
