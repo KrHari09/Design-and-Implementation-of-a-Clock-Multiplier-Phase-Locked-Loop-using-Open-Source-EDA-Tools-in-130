@@ -98,7 +98,7 @@ A classical charge-pump PLL architecture with 5 functional blocks:
 <img width="1282" height="364" alt="block diagram" src="https://github.com/user-attachments/assets/c13958f7-c131-4f72-8fe8-307d2c41d3c6" />
 <br>
 
-
+---
 ## Pre layout simulations
 
  ### 1. Phase frequency detector (PFD)  </p>
@@ -114,9 +114,11 @@ A phase frequency detector or a phase comparator outputs an UP or a DOWN signal 
   </p>
 There is a 1ns difference between the time period of f_vco and f_clk_in. This is done to emulate phase & frequency error.   </p>
 
-  **Expected output** </p>
+  **Expected output:-** </p>
 <img width="1176" height="517" alt="Output_expected" src="https://github.com/user-attachments/assets/c8b0192d-fd47-4aad-a198-e86e8d9e94e5" />
-**Simulated output** </p>
+
+
+**Simulated output:-** </p>
 
  - considering constant phase difference between input signal and reference signal </p>
   
