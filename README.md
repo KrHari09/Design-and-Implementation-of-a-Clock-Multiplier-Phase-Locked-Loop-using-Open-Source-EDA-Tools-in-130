@@ -98,12 +98,6 @@ A classical charge-pump PLL architecture with 5 functional blocks:
 <img width="1282" height="364" alt="block diagram" src="https://github.com/user-attachments/assets/c13958f7-c131-4f72-8fe8-307d2c41d3c6" />
 <br>
 
-## EDA tools used
-
-1. xschem
-2. ngspice
-3. magic vlsi
-
 
 ## Pre layout simulations
 
