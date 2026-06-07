@@ -463,5 +463,5 @@ Brown - output signal <br>
 
 <h3> Contact Information</h3>
 
-Hari Kumar(Author), B.Tech ECE - harikumaroct2001@gmail.com
+Hari Kumar(Author)- B.Tech ECE NIT Jamshedpur - harikumaroct2001@gmail.com
 
