@@ -364,7 +364,104 @@ Brown - output signal <br>
 </p>
  <br>
 
+ <img width="1197" height="428" alt="9MHz io" src="https://github.com/user-attachments/assets/0fc9a15d-26fe-4903-851f-6def9bca3757" />
+
+
+</p>
+
+**Fig - input-output for 9mhz operation**
+</p>
+ <br>
+
+<img width="1717" height="511" alt="9MHz close up" src="https://github.com/user-attachments/assets/261d143e-a70e-4e35-908b-187fdde34fae" />
+
+</p>
+
+**Fig - settled output for 9mhz operation**
+</p>
+ <br>
  
+### 2. 12.5 Mhz input 
+
+<img width="1697" height="885" alt="12 5 MHz" src="https://github.com/user-attachments/assets/84f08b18-6bd5-4268-a4b3-0e48fdc5ae0b" />
 
 
+**Fig - PLL simulation for 12.5Mhz input frequency**
+</p>
+ <br>
+ 
+<img width="1567" height="526" alt="12 5MHz io" src="https://github.com/user-attachments/assets/ee090ad8-b633-4b35-af0e-dfb5f8fc7109" />
+
+</p>
+
+**Fig - input-output for 12.5mhz operation**
+</p>
+ <br>
+
+<img width="1717" height="511" alt="12 5MHz close up" src="https://github.com/user-attachments/assets/0a7cdaef-c3f3-4b35-8f04-ab37cb108c79" />
+
+</p>
+
+**Fig - settled output for 12.5 Mhz operation**
+</p>
+ <br>
+
+## To use this repository
+
+1.	Clone the github repository in your ubuntu system
+2.	Go to the mag folder in the postlayout directory and open terminal in the folder
+3.	Type ‘ngspice pll_tb.spice’
+4.	Paste the following command after simulation is complete
+
+ ```bash
+  plot V(f_clk_in)+8 V(x1.pfd_lay_0/f_vco)+8 V(x1.cp_0/up)+6 V(x1.cp_0/down)+4 V(x1.cp_0/vctrl)+2 V(f_clk_out)
+```
+
+ This will show the plots mentioned in the post layout section of this github repository <br>
+
+**To see the layout**
+
+1. Type in folder terminal window <br>
+
+
+   ```bash
+	magic pll.mag 
+   ```
+
+
+2. The layout will be hollow when the magic tool is opened for the first time. To see the layout clearly. Open the magic terminal (opens with the magic tool) and type
+
+    ```bash
+     % select top cell
+     % expand
+    ```
+
+**NOTE** : all the above steps are valid for a system which has ngspice and magic (sky130nm integrated) installed. The same can be installed from [here](https://www.youtube.com/watch?v=VCuyO7Chvc8&t=2405s&ab_channel=whyRD) 
+
+
+<h3> References </h3>
+<b>[1]</b> Paras Gidd, avsdpll_3v3 github repository <br> <br> 
+<b>[2]</b> Sun, Qingbo et al. “On-chip Phase Locked Loop (PLL) design for clock multiplier in CMOS Monolithic Active Pixel Sensors (MAPS).” (2009). <br> <br> 
+<b>[3]</b> Vincent Von Kaenel, “A 320 MHz, 1.5 mW @ 1.35 V CMOS PLL for Microprocessor Clock Generation” (1996) <br> <br> 
+<b>[4]</b> J. Dhurga Devi “Jitter Reduced Self Biased PLLs—A Systematic Simulation Study”
+<b>[5]</b> Jitter and Phase Noise in Ring Oscillators, Ali Hajimiri, Sotirios Limotyrakis, and Thomas H. Lee <br> <br> 
+<b>[6]</b> Mo Zhang, A Programmable Frequency Divider Having a Wide Division Ratio, and Close-to-50% Output Duty-Cycle  <br> <br> 
+<b>[7]</b> George Tom Varghese, MS thesis on “Phase Locked Loop Design as a Frequency Multiplier” NIT Rourkela (2009) <br> <br> 
+<b>[8]</b> Yang Liu, “Phase Noise in CMOS Phase-Locked Loop Circuits” (2011) <br> <br> 
+<b>[9]</b>	Rushabh Mehta, Design and implementation of a phase locked loop for high-speed serial links <br> <br> 
+<b>[10]</b> Shruti Suman, An Improved Performance Ring VCO: Analysis and Design (2018)  <br> <br> 
+<b>[11]</b> Scott Buchanan, Phase Locked Loop Integrated Circuit (2015)  <br> <br> 
+
+
+<h3> Acknowledgements </h3>
+
+- I thank Mr. Kunal Ghosh, co-founder [VSD](https://www.vlsisystemdesign.com/), for helping me through out the project, I would like to thank my college professors Dr. Chandradeep Singh and Dr. Kunal Singh for encouraging me initiate this project and helping me with conceptual doubts.
+- I thank Stephan Scrippers, David Mitchell Bailey, Luis Henrique Rodovalho, Tim Edwards and Lucas Daudt Franck from the [sky130 Slack channel](https://join.slack.com/t/open-source-silicon/shared_invite/zt-2eg56th1v-2SkdbmD6cGr9EbAFCJgIXw) for helping me with the doubts in xschem and skywater pdk.
+- Rajdeep Mazumder, who's [VLSI Project help video](https://www.youtube.com/watch?v=VCuyO7Chvc8&t=2405s&ab_channel=whyRD) helped me install the open source tools
+- I would also thank Paras Gidd, who's PLL repository was a reference for this project.
+
+
+<h3> Contact Information</h3>
+
+Hari Kumar(Author), B.Tech ECE - harikumaroct2001@gmail.com
 
