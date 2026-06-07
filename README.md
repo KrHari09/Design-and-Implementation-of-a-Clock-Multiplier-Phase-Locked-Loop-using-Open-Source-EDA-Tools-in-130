@@ -17,6 +17,7 @@ A simple PLL consists of a Phase and Frequency Detector (PFD), Charge Pump (CP),
 
 This PLL design multiplies clock frequency by 8 times. 
 
+
 ## Significance of a PLL 
 <img width="1137" height="731" alt="src" src="https://github.com/user-attachments/assets/ca4d1e74-db2e-43b9-a10b-9e4990002d36" />
 
@@ -27,6 +28,45 @@ This PLL design multiplies clock frequency by 8 times.
 </p>
 
 <br>
+
+##  Key Highlights
+
+-  **Full custom analog IC design** — schematic to layout, entirely from scratch
+-  **8× clock multiplication** verified across 5 MHz – 12.5 MHz input range
+-  **Pre-layout AND post-layout** SPICE simulations both passing spec
+-  **Open-source EDA stack**: xschem + ngspice + magic VLSI — no proprietary tools
+-  **SkyWater 130nm PDK** — production-grade open-source foundry process
+-  **Lock-in time as fast as ~5.1 µs** — fast settling post-layout verified
+-  **Circuit area: 0.2641 mm²** — compact layout with full DRC compliance
+-  **Loop filter stability** designed with zero-pole analysis (R-C network)
+
+
+##  Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| **xschem** | Schematic entry and netlist generation |
+| **ngspice** | SPICE simulation (pre & post layout) |
+| **magic VLSI** | Physical layout design and DRC |
+| **SkyWater 130nm PDK** | Open-source foundry process design kit |
+
+##  PLL Architecture
+
+A classical charge-pump PLL architecture with 5 functional blocks:
+
+<img width="1440" height="680" alt="image" src="https://github.com/user-attachments/assets/e1c9c3ac-c5b3-4fd5-b89b-dff66e2443e7" />
+
+
+| Block | Function |
+|---|---|
+| **Phase Frequency Detector (PFD)** | Compares phase/frequency of reference and feedback; outputs UP/DOWN pulses |
+| **Charge Pump (CP)** | Converts UP/DOWN pulse width to proportional current injection |
+| **Loop Filter (LF)** | R-C low-pass filter; converts current to stable VCO control voltage |
+| **Voltage Controlled Oscillator (VCO)** | Differential ring oscillator; output frequency ∝ V<sub>ctrl</sub> |
+| **Frequency Divider (÷8)** | Three cascaded ÷2 flip-flop stages; feeds divided output back to PFD |
+
+
+
 
 ## Specifications
 
@@ -63,6 +103,7 @@ This PLL design multiplies clock frequency by 8 times.
 1. xschem
 2. ngspice
 3. magic vlsi
+
 
 ## Pre layout simulations
 
